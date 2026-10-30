@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple to-do list for keeping track of everyday tasks."
+    />
+    <title>To-do list</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <p class="eyebrow">YOUR DAY, IN FOCUS</p>
+        <h1>To-do list</h1>
+        <p class="intro">Make a little progress, one task at a time.</p>
+      </header>
+
+      <section class="todo-card" aria-label="To-do list">
+        <form class="add-form" id="add-form">
+          <label class="sr-only" for="new-task">Add a task</label>
+          <input
+            id="new-task"
+            name="task"
+            type="text"
+            maxlength="120"
+            placeholder="What needs to get done?"
+            autocomplete="off"
+            required
+          />
+          <button class="add-button" type="submit">Add task</button>
+        </form>
+
+        <p class="notice" id="notice" role="status" aria-live="polite"></p>
+
+        <div class="list-toolbar">
+          <p class="task-count" id="task-count" aria-live="polite"></p>
+          <nav class="filters" aria-label="Filter tasks">
+            <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">
+              All
+            </button>
+            <button type="button" class="filter" data-filter="active" aria-pressed="false">
+              Active
+            </button>
+            <button type="button" class="filter" data-filter="completed" aria-pressed="false">
+              Completed
+            </button>
+          </nav>
+        </div>
+
+        <ul class="task-list" id="task-list" aria-label="Tasks"></ul>
+
+        <div class="list-footer">
+          <span class="footer-hint">Your tasks are saved in this browser.</span>
+          <button class="clear-button" id="clear-completed" type="button" disabled>
+            Clear completed
+          </button>
+        </div>
+      </section>
+
+      <footer class="page-footer">A calmer way to get things done.</footer>
+    </main>
+  </body>
+</html>
