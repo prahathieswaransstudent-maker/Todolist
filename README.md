@@ -59,6 +59,8 @@ The complete program is provided in these files:
 
 Tasks remain saved in the current browser using local storage.
 
+<img width="1527" height="777" alt="image" src="https://github.com/user-attachments/assets/0e0a1623-adf1-4eae-b9ff-cf6a4b1cba52" />
+
 
 ## OUTPUT
 
